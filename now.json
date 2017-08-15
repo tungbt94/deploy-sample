@@ -1,0 +1,14 @@
+{
+  "name": "deploy-example-now",
+  "type": "npm",
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "files": [
+    "db.ts",
+    "now.json",
+    "index.ts",
+    "quotes.ts",
+    "dist"
+  ]
+}
