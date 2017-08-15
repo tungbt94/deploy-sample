@@ -2,6 +2,7 @@ import * as express from 'express'
 import * as bodyParser from 'body-parser'
 
 import { connection } from './db'
+import { addQuote, getAllQuotes } from './qoutes'
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -10,6 +11,14 @@ connection();
 
 app.get('/api/hello', async (req, res) => {
   res.send("Hello World!");
+});
+
+app.get('/api/quote/list', async (req, res) => {
+  getAllQuotes(req, res);
+});
+
+app.post('/api/qoute/add', async (req, res) => {
+  addQuote(req, res);
 });
 
 app.listen(3000, function () {
