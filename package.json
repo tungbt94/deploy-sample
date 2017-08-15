@@ -8,6 +8,7 @@
     "prestart": "tsc",
     "start": "node dist/index.js"
   },
+  "main": "node dist/index.js",
   "author": "tungbt94",
   "license": "ISC",
   "dependencies": {
